@@ -1,0 +1,16 @@
+/* Global */
+
+/* hearder*/
+h1 {
+	text-align: center;
+}
+
+/* main  */ 
+ul li {
+	display: inline;
+}
+.hiden {
+	display: none;
+}
+
+/* footer */ 

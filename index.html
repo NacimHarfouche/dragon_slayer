@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="fr">
+	<meta charset="utf-8">
+	<title>Dragon Slayer</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/npc.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Dragon Slayer</h1>
+		<hr/>
+		<div id="heroStat">
+			<h2>Hero</h2>
+			<ul>
+				<li>PV : <span></span></li>
+				<li>MP : <span></span></li>
+				<li>FOR : <span></span></li>
+				<li>LVL : <span></span></li>
+				<li>EXP : <span></span></li>
+				<li>Coin : <span id="coin"></span></li>
+			</ul>
+		</div id="dragonStat">
+		<div>
+			<h2>Dragon</h2>
+			<ul>
+				<li>PV : <span></span></li>
+				<li>LVL : <span></span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<hr/>
+	</header>
+
+	<main>
+		<section>
+			<h3>Game Mode</h3>
+			<ul id="difficulter">
+				<li><input type="button" value="Facile" data-mode="facile"></li>
+				<li><input type="button" value="Normal" data-mode="normal"></li>
+				<li><input type="button" value="Difficle" data-mode="difficile"></li>
+			</ul>
+		</section>
+		<button type="button" id="startButton">Start</button>
+		<hr/>
+		<p id="result"></p>
+
+	</main>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
