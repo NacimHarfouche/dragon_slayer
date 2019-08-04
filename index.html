@@ -14,7 +14,7 @@
 	<header>
 		<h1>Dragon Slayer</h1>
 		<hr/>
-		<div id="heroStat">
+		<div id="heroStat" class="hiden">
 			<h2>Hero</h2>
 			<ul>
 				<li>PV : <span></span></li>
@@ -24,8 +24,8 @@
 				<li>EXP : <span></span></li>
 				<li>Coin : <span id="coin"></span></li>
 			</ul>
-		</div id="dragonStat">
-		<div>
+		</div>
+		<div id="dragonStat" class="hiden">
 			<h2>Dragon</h2>
 			<ul>
 				<li>PV : <span></span></li>
@@ -35,20 +35,40 @@
 				<li></li>
 			</ul>
 		</div>
-		<hr/>
 	</header>
 
 	<main>
 		<section>
-			<h3>Game Mode</h3>
-			<ul id="difficulter">
-				<li><input type="button" value="Facile" data-mode="facile"></li>
-				<li><input type="button" value="Normal" data-mode="normal"></li>
-				<li><input type="button" value="Difficle" data-mode="difficile"></li>
-			</ul>
+			<article id="difficultyArticle">
+				<h3>Game Mode</h3>
+				<p>Choisissez un mode de difficulté :</p>
+				<ul id="difficulty">
+					<li><input type="button" value="Facile" data-mode="facile"></li>
+					<li><input type="button" value="Normal" data-mode="normal"></li>
+					<li><input type="button" value="Difficle" data-mode="difficile"></li>
+				</ul>
+			</article>
+			<article id="armorArticle" class="hiden">
+				<h3>Armor Type</h3>
+				<p>Choissisez une type d'armure :</p>
+				<ul id="armor">
+					<li><input type="button" value="Cuir" data-mode="cuir"></li>
+					<li><input type="button" value="Fer" data-mode="fer"></li>
+					<li><input type="button" value="Magique" data-mode="magique"></li>
+				</ul>
+			</article>
+			<article id="weaponArticle" class="hiden">
+				<h3>Weapon</h3>
+				<p>Choisissez un type d'arme :</p>
+				<ul id="weapon">
+					<li><input type="button" value="Bois" data-mode="bois"></li>
+					<li><input type="button" value="Acier" data-mode="acier"></li>
+					<li><input type="button" value="Excalibur" data-mode="excalibur"></li>
+				</ul>
+			</article>
 		</section>
-		<button type="button" id="startButton">Start</button>
-		<hr/>
+		<hr>
+		<button class="hiden" type="button" id="startButton">Start</button>
 		<p id="result"></p>
 
 	</main>

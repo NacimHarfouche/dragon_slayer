@@ -26,18 +26,48 @@ let game = new Game();
 let coinSpan = document.getElementById("coin");
 
 
-// les buttons de difficulté du jeu
-let liElts = document.querySelectorAll("ul#difficulter li input");
-console.log(liElts)
-for (let li of liElts) {
-	li.addEventListener("click", function() {
-		game.gameModeChose = this.dataset.mode;
-		document.getElementById("difficulter").classList.add("hiden");
-	});
+// les buttons de difficulté du jeu, armor, weapon
+let buttonDifficultyElts = document.querySelectorAll("ul#difficulty li input[type=button]");
+let buttonArmorElts = document.querySelectorAll("ul#armor li input[type=button]");
+let buttonWeaponElts = document.querySelectorAll("ul#weapon li input[type=button]");
+
+// div stats hero & dragon
+const statsDivHero = document.getElementById("heroStat");
+const statsDivDragon = document.getElementById("dragonStat");
+
+// les articles
+const difficultyArticle = document.getElementById("difficultyArticle");
+const armorArticle = document.getElementById("armorArticle");
+const weaponArticle = document.getElementById("weaponArticle");
+
+// bouton
+const startButton = document.getElementById("startButton");
+
+// function qui repete l'action d'attribuer la value choisie et hiden/show les élèments
+function managementChoice(myArray, elemHiden, elemShow, myClass, divHero = null, divDragon = null) {
+	for (let input of myArray) {
+		input.addEventListener("click", function() {
+			myClass.gameModeChose = this.dataset.mode;
+			elemHiden.classList.add("hiden");
+			elemShow.classList.remove("hiden");
+			if (divHero) {
+				console.log("true")
+				divHero.classList.remove("hiden");
+				divDragon.classList.remove("hiden");
+			}
+		});
+	}
 }
 
+// au moment du choix (click)
+// difficulter
+managementChoice(buttonDifficultyElts,difficultyArticle, armorArticle, game);
+// armure
+managementChoice(buttonArmorElts, armorArticle, weaponArticle, game);
+// arme
+managementChoice(buttonWeaponElts, weaponArticle, startButton, game, statsDivHero, statsDivDragon);
+
 // button Start
-let startButton = document.getElementById("startButton");
 startButton.addEventListener("click", function() {
 	game.gameMode();
 	game.armorType();
