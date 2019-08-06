@@ -1,8 +1,22 @@
 /* Global */
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+}
 
 /* hearder*/
 h1 {
 	text-align: center;
+}
+div {
+	display: inline-block;
+	margin: auto;
+}
+div img {
+	width: 10rem;
+	height: 13rem;
 }
 
 /* main  */ 

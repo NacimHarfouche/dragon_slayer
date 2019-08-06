@@ -16,6 +16,8 @@
 		<hr/>
 		<div id="heroStat" class="hiden">
 			<h2>Hero</h2>
+			<h3>Luk Skriptwalker</h3>
+			<img src="img/hero.jpg" alt="image du hero">
 			<ul>
 				<li>PV : <span></span></li>
 				<li>MP : <span></span></li>
@@ -27,12 +29,11 @@
 		</div>
 		<div id="dragonStat" class="hiden">
 			<h2>Dragon</h2>
+			<h3>Javawan the Bug</h3>
+			<img src="img/dragon.jpg" alt="image du dragon">
 			<ul>
 				<li>PV : <span></span></li>
 				<li>LVL : <span></span></li>
-				<li></li>
-				<li></li>
-				<li></li>
 			</ul>
 		</div>
 	</header>
@@ -40,36 +41,43 @@
 	<main>
 		<section>
 			<article id="difficultyArticle">
+				<p>Bienvenue sur Dragon Slayer</p>
+				<p>Avant de commencer merci de bien vouloir selectionner vos options de jeux :</p>
 				<h3>Game Mode</h3>
 				<p>Choisissez un mode de difficulté :</p>
 				<ul id="difficulty">
-					<li><input type="button" value="Facile" data-mode="facile"></li>
-					<li><input type="button" value="Normal" data-mode="normal"></li>
-					<li><input type="button" value="Difficle" data-mode="difficile"></li>
+					<li><input type="button" value="Facile" data-mode="facile" data-type="inputDifficulty" /></li>
+					<li><input type="button" value="Normal" data-mode="normal" data-type="inputDifficulty" /></li>
+					<li><input type="button" value="Difficle" data-mode="difficile" data-type="inputDifficulty" /></li>
 				</ul>
 			</article>
 			<article id="armorArticle" class="hiden">
 				<h3>Armor Type</h3>
 				<p>Choissisez une type d'armure :</p>
 				<ul id="armor">
-					<li><input type="button" value="Cuir" data-mode="cuir"></li>
-					<li><input type="button" value="Fer" data-mode="fer"></li>
-					<li><input type="button" value="Magique" data-mode="magique"></li>
+					<li><input type="button" value="Cuir" data-armor="cuir" data-type="inputArmor" /></li>
+					<li><input type="button" value="Fer" data-armor="fer" data-type="inputArmor" /></li>
+					<li><input type="button" value="Magique" data-armor="magique" data-type="inputArmor" /></li>
 				</ul>
 			</article>
 			<article id="weaponArticle" class="hiden">
 				<h3>Weapon</h3>
 				<p>Choisissez un type d'arme :</p>
 				<ul id="weapon">
-					<li><input type="button" value="Bois" data-mode="bois"></li>
-					<li><input type="button" value="Acier" data-mode="acier"></li>
-					<li><input type="button" value="Excalibur" data-mode="excalibur"></li>
+					<li><input type="button" value="Bois" data-weapon="bois" data-type="inputWeapon"
+						/></li>
+					<li><input type="button" value="Acier" data-weapon="acier" data-type="inputWeapon"
+						/></li>
+					<li><input type="button" value="Excalibur" data-weapon="excalibur" data-type="inputWeapon"
+						/></li>
 				</ul>
 			</article>
+			<hr>
+			<button class="hiden" type="button" id="startButton">Start</button>
+			<button class="hiden" type="button" id="atkButton">Attaque</button>
+			<p id="result"></p>
 		</section>
-		<hr>
-		<button class="hiden" type="button" id="startButton">Start</button>
-		<p id="result"></p>
+		
 
 	</main>
 	<script type="text/javascript" src="js/main.js"></script>

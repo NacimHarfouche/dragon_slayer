@@ -1,7 +1,7 @@
 class Hero {
 	constructor(name) {
 		this.name = name;
-		this.hp;
+		this.hp = 0;
 		this.power;
 		this.armor;
 		this.sword;
